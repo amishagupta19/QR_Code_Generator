@@ -1,12 +1,30 @@
- *{
+*{
     margin-bottom: 0;
     padding: 0;
     font-family: 'Poppins' , sans-serif;
     box-sizing: border-box;
+    
   }
 
-  body{
-    background-color: #262a2f;
+  h1 {
+    color: #f0f0f0; /* Off-white color */
+    font-family: 'Poppins', sans-serif; /* Updated font */
+    font-size: 2.0rem; /* Adjusted font size */
+    text-align: center; /* Centers the text horizontally */
+    margin: 20px 0; /* Adds spacing above and below */
+  }
+
+  body {
+    background: linear-gradient(-45deg, #494eea, #6a5acd, #262a2f, #1e1e2f);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    color: #f0f0f0;
+  }
+
+  @keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
   }
 
   .container{
@@ -24,6 +42,7 @@
     font-weight: 600;
     font-size: 15px;
     margin-bottom: 9px;
+    color: black;
   }
 
   .container input{
@@ -92,3 +111,60 @@
     }
     
   }
+
+  /* Footer styling */
+footer {
+  background-color: #808080; /* Grey background */
+  padding: 40px 0; /* Increased height by adding more padding */
+  text-align: center;
+  border-top: 1px solid #ddd; /* Subtle border for separation */
+  margin-top: auto; /* Pushes the footer to the bottom */
+  color: #ffffff; /* Brighter white text for better visibility */
+  line-height: 1.8; /* Adds space between lines of text */
+}
+
+footer .social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Increased spacing between icons */
+}
+
+footer .social-links a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+footer .social-links img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+footer .social-links img:hover {
+  transform: scale(1.2);
+}
+
+/* Ensure the body and html take up the full height */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main content should grow to fill available space */
+body {
+  background-color: #1e1e2f; /* Dark purple */
+  color: #f0f0f0;
+}
+
+/* Footer stays at the bottom */
+footer {
+  background-color: #2f2a55; /* Changed to grey */
+  padding: 20px 0; /* Increased height by adding more padding */
+  text-align: center;
+  border-top: 1px solid #ddd;
+  margin-top: auto; /* Pushes the footer to the bottom */
+  color: white; /* Ensures text is visible on grey background */
+  line-height: 1.8; /* Adds space between lines of text */
+}
